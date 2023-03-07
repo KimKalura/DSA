@@ -1,14 +1,11 @@
 package grafs;
-
-import linkedList.MergingLinkedList;
-
 import java.util.ArrayList;
-import java.util.Dictionary;
 import java.util.List;
 
 public class DFS {
 
     public static class Node {
+
         public String value;
         List<Node> children = new ArrayList<>();
 

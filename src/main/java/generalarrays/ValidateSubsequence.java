@@ -4,7 +4,7 @@ public class ValidateSubsequence {
 
     public static void main(String[] args) {
         //Subsir al unui array (validate subsequence)
-        //Avand la dispoizitie doua array-uri, verifica daca al doilea este subsir al primului.
+        //Avand la dispozitie doua array-uri, verifica daca al doilea este subsir al primului.
         //De exemplu, daca array-ul [1,3,4] este subsir al array-ului [1,2,3,4]
         //Dar si [2,4] este subsir al array-ului [1,2,3,4].
         //E nevoie sa se pastreze ordinea, dar elementele nu trebuie sa fie neaparat consecutive.

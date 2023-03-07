@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SpiralTraverse {
+    //trebuie sa parcurgem matricea in modul spirala:
+
     //1, 2, 3, 4
     //12,13,14,5
     //11,16,15,6
@@ -18,9 +20,9 @@ public class SpiralTraverse {
     //a[i][j]
 
     //for (int i=0; i<rows; i++){
-        //for(int j=0; j<cols; j++ {
-            //sout(a[i][j]);
-        //}
+    //for(int j=0; j<cols; j++ {
+    //sout(a[i][j]);
+    //}
     //}
 
     //sR=0
@@ -40,8 +42,10 @@ public class SpiralTraverse {
     //eR--
     //sC++
     //eC--
-//parcurgem elem de pe exterior de la 1 pana la 12, si recursiv apelam 13,14,15,16
-// ma duc cu 4 foruri pt cele 4 laturi
+
+    //parcurgem elem de pe exterior de la 1 pana la 12, si recursiv apelam 13,14,15,16; *se poate face si recursiv si  iterativ(var normala)
+    // ma duc cu 4 foruri pt cele 4 laturi
+
     public static List<Integer> spiralTraverse(int[][] array) {
         ArrayList<Integer> result = new ArrayList<>();
         int startRow = 0;
@@ -69,4 +73,22 @@ public class SpiralTraverse {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        int[][] array = {
+                {1, 2, 3, 4},
+                {12, 13, 14, 5},
+                {11, 16, 15, 6},
+                {10, 9, 8, 7}
+        };
+
+        //afisare matrix
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
 }
