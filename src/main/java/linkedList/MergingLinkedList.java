@@ -42,9 +42,10 @@ public class MergingLinkedList {
 
     //5->2->3->8->4
     //6->8->4
-    //1.aflam lungimea primei liste si celei de-a doua liste ca sa putem face diferenta ...
-    //2.si sa ne mutam cu pointerul la 3
-    //3.mergem cu pointerul cate unu si sa comparam la fiecare pas daca sunt egale nodurile
+    //ma duc cu pointerul cat e diferenta -adica cu 2:
+        //1.aflam lungimea primei liste si celei de-a doua liste ca sa putem face diferenta ...
+        //2.si sa ne mutam cu pointerul la 3
+        //3.mergem cu pointerul cate unu si sa comparam la fiecare pas daca sunt egale nodurile
     public static Integer mergingLinkedList2(Node linkedList1, Node linkedList2) {
         Node currentNodeOne = linkedList1;
         int firstLinkedListLength = 0;

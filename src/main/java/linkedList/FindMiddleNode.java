@@ -5,7 +5,7 @@ public class FindMiddleNode {
 
     //sol1
     //parcurgem toata lista ca sa aflam nr de noduri
-    //mai parcurgem o data pana la numar de noduri impartit la 2 (pana la jumatate)
+    //mai parcurgem o data pana la numarul de noduri impartit la 2 (pana la jumatate)
 
     //sol2
 
