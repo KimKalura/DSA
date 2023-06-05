@@ -34,7 +34,7 @@ public class BSTfindClosestValue {
         }
     }
 
-    //O(log(N)0 T, O(1) S-?pt ca nu facem apeluri recursive si nici nu ne luam alta structura de date ajutatore
+    //O(log(N) T, O(1) S-?pt ca nu facem apeluri recursive si nici nu ne luam alta structura de date ajutatore
     public static int findClosestValue2(Node tree, int target, int closest, int nodeValue) {
 
         Node currentNode = tree;

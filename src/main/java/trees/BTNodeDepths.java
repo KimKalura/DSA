@@ -11,6 +11,8 @@ public class BTNodeDepths {
         }
     }
 
+    //sa calculam suma adancimilor nodurilor:
+
     //O(N) TS
     public static int nodeDepths(Node tree, int depth) {
         if (tree == null) {
