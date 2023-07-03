@@ -15,6 +15,18 @@ public class ContainsDuplicate {
 
 
     public static boolean containsDuplicate(int[] nums) {
+
+        //brute force,CT O(N2)???; compar fiecare element cu celelalte
+        /*for (int i = 0; i < nums.length; i++) {
+            int element = nums[i];
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == element) {
+                    return true;
+                }
+            }
+        }
+        return false;*/
+
         //Sol 1
          /*HashSet<Integer> set = new HashSet<>();
          for (int num : nums) {
