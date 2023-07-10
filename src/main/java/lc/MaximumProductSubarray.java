@@ -23,18 +23,18 @@ public class MaximumProductSubarray {
         for (int i = 1; i < nums.length; i++) {
             int num = nums[i];
 
-            // If the current number is negative, swap maxEndingHere and minEndingHere
+            // daca numarul curent este negativ, se va interschimba maxEndingHere si minEndingHere
             if (num < 0) {
                 int temp = maxEndingHere;
                 maxEndingHere = minEndingHere;
                 minEndingHere = temp;
             }
 
-            // Update the maximum and minimum product ending at the current position
+            // actualizam produsul maxim și minim care se termină la poziția curentă
             maxEndingHere = Math.max(num, maxEndingHere * num);
             minEndingHere = Math.min(num, minEndingHere * num);
 
-            // Update the maximum product if necessary
+            // actualizați produsul maxim dacă este necesar
             maxProduct = Math.max(maxProduct, maxEndingHere);
         }
 
