@@ -13,7 +13,7 @@ public class ContainerWithMostWater {
 
     //Input: height = [1,1]
     //Output: 1
-    
+
 
     // folosim 2 pointeri: unul va incepe de la inceput, celalalt de la sfarsit
     // maxArea -> se actualizeaza in timpul parcurgerii; tine cantitatea maxima a apei
