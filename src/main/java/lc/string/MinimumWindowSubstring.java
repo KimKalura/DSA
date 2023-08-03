@@ -27,7 +27,7 @@ public class MinimumWindowSubstring {
     //folosim 2 pointeri right si left
     //mutam right pana va contine toate caracterele din t
     //apoi mutam left pana cand pana cand nu mai putem edxclude alte caractere din sirul tinta t
-    
+
 
 
     public static String minWindow(String s, String t) {
