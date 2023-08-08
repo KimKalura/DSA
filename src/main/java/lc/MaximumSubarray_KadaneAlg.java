@@ -17,8 +17,8 @@ public class MaximumSubarray_KadaneAlg {
         return overallMaxSum;
 
         //sau
-        //complexity: linear Time: O(N) -> N is the number of items that we have in our nums array
-        //             space: constant O(1)-> we not onotializing any new memory in this alghoritm
+        //complexity: linear Time: O(N) -> N este numărul de elemente pe care le avem în array-ul noastră nums
+        //             space: constant O(1)-> nu inițializam o memorie nouă în acest algoritm
         /*int max = nums[0];
         for(int i=1; i<nums.length; i++){
             nums[i] = Math.max(nums[i], nums[i] + nums[i-1]);

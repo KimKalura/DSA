@@ -35,12 +35,16 @@ public class LongestRepeatingSubsequence {
     //as it appears on index 1 in subsequence A
     //and index 0 in subsequence B.
 
+    //cream un array 2D-> dp[i][j] reprezintă lungimea celei mai lungi subsecvențe repetate pentru subșirurile str.substring(0, i) și str.substring(0, j)
+    //iterăm prin caracterele șirului folosind două for-uri. Dacă caracterele de la pozițiile curente sunt egale (str.charAt(i - 1) == str.charAt(j - 1)) și pozițiile nu sunt aceleași (i != j), atunci putem extinde subsecvența comună anterioară, iar dp[i][j] va fi cu unul mai mult decât dp[i - 1][j - 1]
+    //dacă caracterele sunt diferite, luăm maximul lungimilor subsecvențelor anterioare (dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]) )
+    //stocam rezulatatul in dp[n][n]
+
     //TC SC :O(n2)
     public static int longestRepeatingSubsequence(String str) {
         int n = str.length();
         int[][] dp = new int[n + 1][n + 1];
 
-        // Fill the dp array
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 if (str.charAt(i - 1) == str.charAt(j - 1) && i != j) {

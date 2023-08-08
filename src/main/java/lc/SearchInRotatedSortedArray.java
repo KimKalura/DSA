@@ -14,6 +14,16 @@ public class SearchInRotatedSortedArray {
     //Input: nums = [1], target = 0
     //Output: -1
 
+
+    //folosim 2 pointeri left+right pentru a defini intervalul de cautare
+    //actualizăm pointerii pe baza comparației dintre nums[mid] și target
+    //dacă nums[mid] este egal cu target, am găsit elementul target, așa că revenim la mijloc
+    //dacă jumătatea stângă a matricei (nums[left] la nums[mid]) este sortată, verificăm dacă target se află în acel interval. Dacă este, actualizăm dreapta la mid - 1 pentru a căuta în jumătatea stângă. În caz contrar, actualizăm stânga la mid + 1 pentru a căuta în jumătatea dreaptă
+    //dacă jumătatea dreaptă a matricei (nums[mid] la nums[right]) este sortată, verificăm dacă target se află în acel interval. Dacă este, actualizăm stânga la mid + 1 pentru a căuta în jumătatea dreaptă. În caz contrar, actualizăm dreapta la mid - 1 pentru a căuta în jumătatea stângă.
+    //continuam pana cand left > right; si indica target nu se afla in array  si returnam -1
+
+    //complexitate: T O(log n) ->unde n este numărul de elemente din array. La fiecare pas al căutării binare, intervalul de căutare este împărțit la 2, reducând efectiv spațiul de căutare la jumătate.
+    //complexitate: S O(1)
     public static int search(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;

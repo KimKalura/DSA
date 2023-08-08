@@ -37,9 +37,7 @@ public class MaximumProductSubarray {
             // actualizați produsul maxim dacă este necesar
             maxProduct = Math.max(maxProduct, maxEndingHere);
         }
-
         return maxProduct;
-
     }
 
     public static void main(String[] args) {
