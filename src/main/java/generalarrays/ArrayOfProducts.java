@@ -12,6 +12,30 @@ public class ArrayOfProducts {
     //parcurgem elementele din array
     //pentru fiecare element - parcurgem celelalte element si calculam produsul - il punem la pozitia i intr-un array rezultat
     //complexitate - O(N2) timp si O(N) spatiu
+    public static int[] getProductArray(int[] nums) {
+        int n = nums.length;
+        int[] products = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            int product = 1;
+            for (int j = 0; j < n; j++) {
+                if (j != i) {
+                    product *= nums[j];
+                }
+            }
+            products[i] = product;
+        }
+        return products;
+    }
+
+    public static void main(String[] args) {
+        int[] input = {5, 1, 4, 2};
+        int[] output = getProductArray(input);
+
+        for (int num : output) {
+            System.out.print(num + " ");
+        }
+    }
 
     //sol2
     //fac produsul tuturor numelor din array

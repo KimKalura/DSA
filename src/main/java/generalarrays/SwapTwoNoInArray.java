@@ -12,6 +12,8 @@ public class SwapTwoNoInArray {
 
         int[] array = {1,2,3,4,5};
 
+        System.out.println(array); // adresa [I@7699a589
+
         System.out.println("Array = " + Arrays.toString(array));
         swapAll(array, 3, 4);
         System.out.println("After swaping two number in the array:");
@@ -19,12 +21,13 @@ public class SwapTwoNoInArray {
 
     }
 
+    //TC:O(N); SC:O(1)
     public static void swapAll(int[]array, int i, int j) {
-        for(int count=0; count<array.length; count++) {
+       // for(int count=0; count<array.length; count++) {
             int temp = array[i];
             array[i] = array[j];
             array[j] = temp;
-        }
+        //}
     }
 }
 

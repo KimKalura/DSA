@@ -13,7 +13,7 @@ public class ThreeLargestNo {
         }
     }
 
-    public static int[] findNo(int[] arr) {  //O(N)
+    public static int[] findNo(int[] arr) {  //TC:O(N), SC:O(1)
         int[] threeLargestNo = {Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE};
         for (int num : arr) {
             if (num > threeLargestNo[2]) {

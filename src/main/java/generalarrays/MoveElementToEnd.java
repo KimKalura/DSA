@@ -1,5 +1,6 @@
 package generalarrays;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class MoveElementToEnd {
@@ -22,14 +23,27 @@ public class MoveElementToEnd {
             if (array.get(i) == toMove) {
                 swap(i, j, array);
             }
+            //i++;//
         }
         return array;
     }
 
     public static void swap(int i, int j, List<Integer> array) {
         int temp = array.get(i);
-        array.set(j, array.get(i));
-        array.set(i, temp);
+        array.set(j, array.get(i));//array.set(i, array.get(j))
+        array.set(i, temp);//array.set(j, temp)
+    }
+
+    public static void main(String[] args) {
+        List<Integer> input =  Arrays.asList(2,1,2,2,2,3,4,2,2);
+        System.out.println(moveElementToEnd(input, 2));
+
+        //sol2
+        int[] input2 = {2, 1, 2, 2, 2, 3, 4, 2, 2};
+        int[] result = var2(input2);
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
     }
 
     //sol2
@@ -37,6 +51,25 @@ public class MoveElementToEnd {
     //parcurgem array-ul de input si punem in array-ul gol toate elementele diferite de 2
     //apoi punem in array-ul gol atatea elemente de 2 pana umplem array-ul (pentru ca va fi de aceeasi lungime cu array-ul de input)
     //O(N)T, O(N)S
+    public static int[] var2(int[] nums) {
+        int[] result = new int[nums.length];
+        int currentIndex = 0;
+
+        // Parcurgem array-ul si punem elementele diferite de 2 in noul array
+        for (int num : nums) {
+            if (num != 2) {
+                result[currentIndex] = num;
+                currentIndex++;
+            }
+        }
+
+        // Adaugam elementele de 2 la sfarsitul noului array
+        while (currentIndex < nums.length) {
+            result[currentIndex] = 2;
+            currentIndex++;
+        }
+        return result;
+    }
 
     //sol3
     //parcurgem array-ul
