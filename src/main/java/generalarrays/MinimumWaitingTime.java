@@ -34,4 +34,9 @@ public class MinimumWaitingTime {
         }
         return totalWaitingTime;
     }
+
+    public static void main(String[] args) {
+        int[] tasks = {3,2,1,2,6};
+        System.out.println(minWatingTime(tasks));
+    }
 }
