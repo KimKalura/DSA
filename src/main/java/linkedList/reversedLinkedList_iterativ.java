@@ -31,11 +31,6 @@ public class reversedLinkedList_iterativ {
         Node previous = null;
         Node current = firstNode;
 
-        //caz de baza
-        /*if (firstNode == null) {
-            return null;
-        }*/
-
         while (current != null) {
             Node next = current.next;//next e pe post de temp
             current.next = previous;
