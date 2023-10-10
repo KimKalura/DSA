@@ -17,7 +17,7 @@ public class RemoveKthNodeFromEnd {
         Node first = head;
         Node second = head;
         int count = 0;
-        while (count < 4) {
+        while (count < k) {
             second = second.next;
             count++;
         }

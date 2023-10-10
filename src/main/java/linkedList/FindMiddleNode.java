@@ -28,4 +28,27 @@ public class FindMiddleNode {
         }
         return first.value;
     }
+
+    public static void main(String[] args) {
+        /*Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
+        System.out.println(findMiddleNode(head)); //3*/
+
+        Node node1 = new Node(1);
+        Node node2 = new Node(2);
+        Node node3 = new Node(3);
+        Node node4 = new Node(4);
+        Node node5 = new Node(5);
+
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+        node5.next = null;
+
+        System.out.println(findMiddleNode(node1));//3
+    }
 }
