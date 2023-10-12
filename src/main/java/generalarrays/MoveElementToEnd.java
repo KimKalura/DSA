@@ -44,6 +44,7 @@ public class MoveElementToEnd {
         for (int num : result) {
             System.out.print(num + " ");
         }
+        //System.out.println(Arrays.toString(result));
     }
 
     //sol2

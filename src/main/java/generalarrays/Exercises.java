@@ -52,6 +52,6 @@ public class Exercises {
         int[] arr2 = {26, 134, 135, 15, 17};
 
         HashSet<Integer> result = getMinimDifferenceBy2Numbers(arr1, arr2);
-        System.out.println("Output: " + result);
+        System.out.println(result);
     }
 }

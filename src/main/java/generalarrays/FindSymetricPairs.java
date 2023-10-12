@@ -1,7 +1,6 @@
 package generalarrays;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class FindSymetricPairs {
     //[[1,2],[3,4],[5,9],[4,3],[9,5]]
@@ -33,5 +32,10 @@ public class FindSymetricPairs {
             }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        int[][] array = {{1, 2}, {3, 4}, {5, 9},{4, 3},{9,5}};
+        System.out.println(findSymmetric(array));
     }
 }
