@@ -16,4 +16,17 @@ public class Fibonacci {
             return fib(n - 1) + fib(n - 2);
         }
     }
+
+    public static int fib1(int n) {
+        int a = 0;
+        int b = 1;
+        int sum = a + b;
+        while (n > 1) {
+            sum = a + b;
+            a = b;
+            b = sum;
+            n--;
+        }
+        return sum;
+    }
 }
