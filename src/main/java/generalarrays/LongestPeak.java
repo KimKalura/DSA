@@ -18,7 +18,7 @@ public class LongestPeak {
         int i = 1;
 
         while (i < arr.length - 2) {
-            if (arr[i] < arr[i - 1] && arr[i] > arr[i + 1]) { // initial arr[i] > arr[i - 1]
+            if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) { //
                 left = i - 2;
                 while (left >= 0 && arr[left] < arr[left + 1]) {
                     left--;
@@ -28,17 +28,17 @@ public class LongestPeak {
                     right++;
                 }
             }
-            currentLength = right - left - 1;
+            currentLength = right - left -1;
             if (maxLength < currentLength) {
                 maxLength = currentLength;
             }
-            i = Math.max(i + 1, i + maxLength);//right ->avem ArrayIndexOutOfBoundsException
+            i = right; //
         }
         return maxLength;
     }
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3};
-        System.out.println(longestPeak(arr));//6
+         System.out.println(longestPeak(arr));//indexul 6
     }
 }

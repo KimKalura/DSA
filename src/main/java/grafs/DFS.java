@@ -13,6 +13,8 @@ public class DFS {
             this.value = value;
         }
 
+        //adaug in array elementul la care sunt in parcurgerea mea , si dupa pt toti copii lui sa apelez recursiv
+
         //O(V+E) T; O(V) S
         //O(V+E) T->cate varfuri sunt de atatea ori apelam recursiv si adunam muchiile; ne luam array ajutator in care punem rezultatul; e in fctie de nr de varfuri O(V) S
         //N(adica V)--> nr de varfuri
