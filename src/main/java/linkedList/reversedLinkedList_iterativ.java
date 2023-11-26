@@ -29,7 +29,7 @@ public class reversedLinkedList_iterativ {
 
     public static Node reverse(Node firstNode) {
         Node previous = null;
-        Node current = firstNode;
+        Node current = firstNode;//head
 
         while (current != null) {
             Node next = current.next;//next e pe post de temp
